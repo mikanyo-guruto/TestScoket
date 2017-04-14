@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html>
+<head></head>
+<body>
+  <ul id="msg_list"></ul>
+  <form action="" method="post" onsubmit="return false;">
+    <input type="text" class="text" id="message"/>
+    <input type="hidden" id="test" value="1">
+    <input type="submit" class="button" id="send" value="送信" />
+  </form>
+</body>
+<script type="text/javascript" src="http://localhost/test/jquery-3.2.1.min.js"></script>
+<!-- socket.ioのクラインアントライブラリを取得 -->  
+<script src="http://localhost/test/node_modules/socket.io-client/dist/socket.io.js"></script>
+<script type="text/javascript">
+
+//接続先の指定  
+var url = "localhost:8080";
+
+//接続
+var socket = io.connect(url);
+
+//サーバから受け取るイベントを作成
+socket.on("sendMessageToClient", function (data) {
+    $("#msg_list").prepend("<li>" + data.value + "</li>");
+});
+
+//ボタンクリック時に、メッセージ送信
+$("input#send").click(function(){
+    var test = ["test1", "test2"];
+    socket.emit("sendMessageToServer", {value:test});
+
+    var msg = $("#message").val(); 
+    $("#message").val(""); 
+    //サーバへ送信
+    socket.emit("sendMessageToServer", {value:msg}); 
+});
+</script>
+</html>
