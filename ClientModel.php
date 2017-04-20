@@ -3,6 +3,7 @@
 	$pass = "";
 
 	function testLogin($id, $pw) {
+		/*
 		try{
 			$dbh = new PDO('mysql:host=localhost;dbname=test', $user, $pass);
 
@@ -16,5 +17,10 @@
 		}catch(PDOException $e) {
 			echo $e->getMessage();
 			die();
+		}*/
+		if($id === "test" && $pw = "1231") {
+			return true;
+		}else{
+			return false;
 		}
 	}

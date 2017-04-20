@@ -1,11 +1,20 @@
 //サーバ作成
 var io = require('socket.io')(8080);
 var users = [];
-var name = "";
 //クライアント接続があると、以下の処理をさせる。
 io.on('connection', function (socket) {
+	// 複数のクライアント名を保存
+	/*
 	socket['userName'] = name;
 	users.push(socket);
+	*/
+
+	// ユーザの名前をセット
+	socket.on("setUserName", function (name) {
+		console.log(name.value);
+		socket['userName'] = name.value;
+		//users.push(socket);
+	});
 
 	//接続通知をクライアントに送信
 	io.emit("sendMessageToClient", {value: socket['userName'] + "が入室しました。"});
