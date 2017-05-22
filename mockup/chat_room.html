@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./css/common/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/chat_room/style.css">
+</head>
+<body>
+<div class="wrap">
+	<div class="header">
+		<nav class="navbar navbar-default">
+			<p class="title">Room Title</p>
+			<ul class="nav navbar-nav navbar-right">
+				<li><p class="count_member">2 Peaple</p></li>
+				<li><button class="btn btn-warning" onclick="location.href='./select_room.html'">RoomOut</button></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="chat">
+		<div class="chat_field">
+			<table>
+				<tr>
+					<td class="user_name">User01</td><td class="message">Hello! User02</td><td class="date">2017/01/01 24:00</td>
+				</tr>
+				<tr>
+					<td class="user_name">User01</td><td class="message">Hello! User02</td><td class="date">2017/01/01 24:00</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="message_field">
+			<form method="post" class="input-group">
+				<input type="text" class="form-control message" name="message">
+				<input type="submit" class="btn btn-defalt send" value="send">
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
