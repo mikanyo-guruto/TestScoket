@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrap {
+	height: 640px;
+	margin: 0 auto;
+	position: relative;
+	width: 1080px;
+}
+
+.message {
+	color: #cccccc;
+	font-size: 36px;
+}
+
+.user {
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 150px;
+	position: absolute;
+	text-align: center;
+	width: 350px;
+}
+
+form {
+	margin: 0 auto;
+}
+form .name {
+	margin: 0 auto;
+	width: 240px;
+}
+form .submit {
+	background-color: #cccccc;
+	margin-top: 20px;
+}
