@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+}
+
+.wrap {
+	margin: 0 auto;
+	position: relative;
+	width: 1080px;
+}
+
+/* ### header ### */
+
+.header {
+	height: 50px;
+	line-height: 50px;
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+
+.header .title {
+	float: left;
+	font-size: 32px;
+	padding-left: 10px;
+}
+
+.header .count_member {
+	font-size: 21px;
+	padding-right: 15px;
+}
+
+.nav {
+	margin-right: 20px;
+}
+
+.chat {
+	border: 2px solid gray;
+	font-size: 18px;
+	height: 600px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	padding-top: 10px;
+	width: 1080px;
+}
+.chat_field {
+	height: 546px;
+	overflow-y: scroll;
+}
+.chat_field td {
+	height: 35px;
+}
+.chat_field .user_name {
+	text-align: center;
+	width: 140px;
+}
+.chat_field .message {
+	margin-left: 30px;
+	text-align: left;
+	width: 750px;
+}
+.chat_field .date {
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: right;
+	width: 170px;
+}
+.message_field {
+	bottom: 0;
+	height: 40px;
+	width: 1078px;
+}
+.message_field .message {
+	margin-left: 10px;
+	width: 960px;
+}
+.message_field .send {
+	font-size: 18px;
+	height: 35px;
+	margin-left: 10px;
+	width: 70px;
+}

@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+}
+
+.wrap {
+	height: 640px;
+	margin: 0 auto;
+	position: relative;
+	width: 1080px;
+}
+
+/* ### header ### */
+
+.header {
+	height: 50px;
+	line-height: 50px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.header .title {
+	float: left;
+	font-size: 32px;
+	padding-left: 10px;
+}
+
+.header .name {
+	font-size: 21px;
+	padding-right: 15px;
+}
+
+.nav {
+	margin-right: 20px;
+}
+
+/* ### header ### */
+
+/* ### message field */
+.message p {
+	font-size: 21px;
+	text-align: center;
+}
+/* ### message field */
+
+.create_room button {
+	font-size: 21px;
+	height: 62px;
+	margin-bottom: 20px;
+	width: 1080px;
+}
+
+/* ### list_room ### */
+.list_room {
+	font-size: 21px;
+	text-align: center;
+}
+.list_room thead tr th{
+	text-align: center;
+}
+.list_room tbody tr td{
+	margin-top: 10px;
+}
+/* ### list_room ### */
+
+
+#myModal .modal-content {
+	height: 246px;
+	text-align: center;
+	width: 265px;
+}
+#myModal .modal-content .title {
+	margin-top: 50px;
+}
+#myModal .modal-content form {
+	margin-top: 20px;
+}
+#myModal .modal-content form .room_title{
+	height: 40px;
+	margin-left: 15px;
+	margin-right: 15px;
+	width: 233px;
+}
+#myModal .modal-content form .btn{
+	margin-top: 20px;
+}

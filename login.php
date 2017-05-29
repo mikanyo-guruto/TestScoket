@@ -20,7 +20,7 @@
 			}
 			?></p>
 		</div>
-		<form action="./clientController.php" method="post">
+		<form action="./controller/loginController.php" method="post">
 			<div class="form-group">
 				<input type="text" class="form-control name" name="name">
 				<input type="submit" class="btn btn-default submit" value="Login">
