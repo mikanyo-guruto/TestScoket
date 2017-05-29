@@ -15,6 +15,7 @@
 	if (isset($_SESSION['msg'])) {
 		header('Location: ../login.php');
 	}else{
+		session_cache_limiter('private_no_expire');
 		$_SESSION['name'] = $name;
 		header('Location: ../select_room.php');
 	}
