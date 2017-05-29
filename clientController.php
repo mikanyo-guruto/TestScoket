@@ -1,18 +1,21 @@
 <?php
 	require('ClientModel.php');
 
-	$_id = "test";
-	$_pw = "1231";
+	$name = $_POST['name'];
+	$name = trim(htmlspecialchars($name, ENT_NOQUOTES, "UTF-8"));
 
-	$id = $_POST['id'];
-	$pw = $_POST['pass'];
+	session_start();
+	// ヴァリデーションチェック
+	if (empty($name)) {
+		$_SESSION['msg'] = "名前を入力して下さい。";
+	}elseif(mb_strlen($name) > 30) {
+		$_SESSION['msg'] = "名前は30文字以内で入力して下さい。";
+	}
 
-	if(testLogin($id, $pw)) {
-		session_start();
-		$_SESSION['user_name'] = $id;
-		header('Location: ./client.view.php');
-		exit;
+	// エラーがあればログイン画面へ
+	if (isset($_SESSION['msg'])) {
+		header('Location: ./login.php');
 	}else{
-		header('Location: ./signin.php');
-		exit;
+		$_SESSION['name'] = $name;
+		header('Location: ./select_room.php');
 	}
