@@ -1,4 +1,0 @@
-node.jsのインストール
-
-npm install socket.io // socket
-npm install mysql // mysql
