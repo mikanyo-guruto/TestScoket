@@ -33,7 +33,7 @@
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	    	<h2 class="title">Create Room</h2>
-	    	<form method="post">
+	    	<form action="" method="post">
 	    		<input type="text" class="form-control room_title" name="roon_title">
 	    		<input type="submit" class="btn btn-success" name="Create" value="Create">
 	    		<button type="button" class="btn btn-danger" data-dismiss="modal" href="#">Cancel</button>
@@ -55,7 +55,7 @@
 				<tr>
 					<td>Room Title</td>
 					<td>2</td>
-					<td><button class="btn btn-primary" onclick="location.href='./chat_room.html'">Join</button></td>
+					<td><button class="btn btn-primary" onclick="location.href='./chat_room.php'">Join</button></td>
 				</tr>
 				<tr>
 					<td>Room Title</td>
