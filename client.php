@@ -15,25 +15,14 @@
 <!-- socket.ioのクラインアントライブラリを取得 -->  
 <script src="./node_modules/socket.io-client/dist/socket.io.js"></script>
 <script type="text/javascript">
-
-// 名前の取得
-/*
-var parm = location.search.substring(1).split('&');
-for(var i=0;parm[i];i++) {
-    var kv = parm[i].split('=');
-    var name = kv[1];
-    console.log(name);
-}
-*/
-var name = "<?php echo $_SESSION['user_name']; ?>";
-
-//接続先の指定
-var url = "localhost:8080";
-
 //接続
+var url = "localhost:8080";
 var socket = io.connect(url);
 
-socket.emit("setUserName", {value:name});
+function init(name) {
+  alert('a');
+  socket.emit("connected", name);
+}
 
 //サーバから受け取るイベントを作成
 socket.on("sendMessageToClient", function (data) {
@@ -47,5 +36,10 @@ $("input#send").click(function(){
     //サーバへ送信
     socket.emit("sendMessageToServer", {value:msg}); 
 });
+
+// 開始処理
+var name = "<?php echo $_SESSION['user_name']; ?>";
+init(name);
+
 </script>
 </html>

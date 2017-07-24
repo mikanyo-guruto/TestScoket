@@ -9,4 +9,8 @@
 	function show_all_room() {
 
 	}
-	
+
+	function join_room()
+	{
+		echo "in";
+	}

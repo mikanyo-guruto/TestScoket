@@ -4,9 +4,12 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="./css/common/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/select_room/style.css">
+	<?php
+		require_once( __DIR__ . './controller/roomController.php');
+		session_start();
+	?>
 </head>
 <body>
-<?php session_start(); ?>
 <div class="wrap">
 	<div class="header">
 		<nav class="navbar navbar-default">

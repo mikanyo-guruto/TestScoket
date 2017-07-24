@@ -9,13 +9,12 @@
 <body>
   <?php
     session_start();
-    $name = $_SESSION['name'];
   ?>
 <div class="wrap">
 
 	<div class="header">
 		<nav class="navbar navbar-default">
-			<p class="title">Select Room</p>
+			<p class="title">Chat Room</p>
 			<ul class="nav navbar-nav navbar-right">
 				<li><p class="name">Hello <?php echo $_SESSION['name']; ?></p></li>
 				<li><button class="btn btn-warning" onclick="location.href='./select_room.php'">RoomOut</button></li>
@@ -25,7 +24,7 @@
 
 	<div class="msg_main">
 		<div class="msg_list">
-  			<table id="msg_list"></table>
+  			<table id="table_msg_list"></table>
   		</div>
 
   		<form action="" method="post" class="form-inline form" onsubmit="return false;">
@@ -42,5 +41,15 @@
 <script type="text/javascript" src="./jquery-3.2.1.min.js"></script>
 <!-- socket.ioのクラインアントライブラリを取得 -->  
 <script src="./node_modules/socket.io-client/dist/socket.io.js"></script>
+<script type="text/javascript">
+	//接続
+	var url = "localhost:8080";
+	var socket = io.connect(url);
+
+	// 開始処理
+	var name = "<?php echo $_SESSION['name']; ?>";
+	socket.emit("connected", name);
+</script>
 <script src="./socket/client.js"></script>
+
 </html>
