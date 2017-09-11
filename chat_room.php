@@ -9,6 +9,9 @@
 <body>
   <?php
     session_start();
+    if (!isset($_SESSION['name'])) {
+    	header("Location: ./login.php");
+    }
   ?>
 <div class="wrap">
 
@@ -48,7 +51,6 @@
 <script type="text/javascript" src="./jquery-3.2.1.min.js"></script>
 <!-- socket.ioのクラインアントライブラリを取得 -->  
 <script src="./node_modules/socket.io-client/dist/socket.io.js"></script>
-<script type="text/javascript" src="./socket/client.js"></script>
 <script type="text/javascript">
 	//接続
 	var url = "localhost:8080";
@@ -57,12 +59,12 @@
 
 	socket.on("sendMessageToClient", function() {});
 
-	//
+	// 開始処理
 	function start(name) {
 		socket.emit("connected", name);
 	}
 
-	//
+	// メッセージの送信処理
 	function publishMessage() {
 		var textInput = document.getElementById('message');
 		socket.emit("sendMessageToServer", {value: textInput.value, name: "<?php echo $_SESSION['name']; ?>"});

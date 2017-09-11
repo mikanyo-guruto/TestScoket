@@ -11,12 +11,12 @@ io.on('connection', function (socket) {
 		io.emit("sendMessageToClient", {value: "[" + user[socket.id] + "]が入室しました。"});
 	});
 
-	//クライアントからの受信イベントを設定
+	// クライアントからの受信イベントを設定
 	socket.on("sendMessageToServer", function (data) {
     	io.emit("sendMessageToClient", {value: "[" + user[socket.id] + "] " + data.value});
 	});
 
-	//接続切れイベントを設定
+	// 接続切れイベントを設定
 	socket.on("disconnect", function () {
 		if (user[socket.id]) {
     		io.emit("sendMessageToClient", {value: "[" + user[socket.id] + "]が退室しました。"});
