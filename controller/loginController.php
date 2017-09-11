@@ -17,5 +17,5 @@
 	}else{
 		session_cache_limiter('private_no_expire');
 		$_SESSION['name'] = $name;
-		header('Location: ../select_room.php');
+		header('Location: ../chat_room.php');
 	}

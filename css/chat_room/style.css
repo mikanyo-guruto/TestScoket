@@ -41,7 +41,67 @@ p {
 /* ### header ### */
 
 /* ### msg_main ### */
-#msg_list li {
-	list-style: none;
+.msg_main {
+	border: solid 2px #c0c0c0;
+	height: 610px;
+	margin-bottom: 20px;
+	overflow: hidden;
 }
+
+.msg_list {
+	height: 550px;
+	margin-bottom: 10px;
+	overflow-y: scroll;
+}
+
+#msg_list {
+	width: 100%;
+}
+
+#msg_list tr {
+	vertical-align: top;
+	width: auto;
+}
+#msg_list td {
+	list-style: none;
+	padding: 10px 10px 0 10px;
+	width: 550px;
+}
+#msg_list .name {
+	text-align: center;
+	width: 10%;
+}
+#msg_list .message {
+	text-align: left;
+	width: 70%;
+}
+#msg_list .create_time {
+	text-align: center;
+	width: 20%;
+}
+
+/* sendボタン　*/
+
+.msg_main form {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.msg_main .message {
+	padding-left: 15px;
+	padding-top: 5px;
+}
+.msg_main .text {
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 87%;
+}
+.msg_main .button {
+	background-color: #c0c0c0;
+	color: white;
+	margin-left: 10px;
+	width: 88px;
+}
+
+/* sendボタン　*/
 /* ### msg_main ### */

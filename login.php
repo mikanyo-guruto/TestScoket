@@ -23,6 +23,7 @@
 		<form action="./controller/loginController.php" method="post">
 			<div class="form-group">
 				<input type="text" class="form-control name" name="name">
+				<input type="hidden" name="token" value="<?php echo sha1(date("H:i:s")); ?>">
 				<input type="submit" class="btn btn-default submit" value="Login">
 			</div>
 		</form>
